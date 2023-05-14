@@ -39,7 +39,7 @@ Route::get('dashboard', function () {
     return view('admin/dashboard');
 });
 Route::resource('car_details',CarDetailController::class);
-Route::get('admin-login','Admin\AdminController@adminLogin')->name('admin.login');
+Route::post('admin-login','Admin\AdminController@adminLogin')->name('admin.login');
 
 // Route::get('upload-car', function () {
 //     return view('uploadcar');

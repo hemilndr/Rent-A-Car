@@ -39,7 +39,7 @@
 									<label for="" class="text-uppercase text-sm">Password</label>
 									<input id="pasword" type="password" placeholder="Password" name="password" class="form-control mb">                                    
 									<button class="btn btn-primary btn-block"  >LOGIN</button>
-												<p id="demo"></p>
+												<p id="login-error">  {{ $errors->first('error') }}</p>
 								
 								</form>
 							</div>
@@ -49,27 +49,6 @@
 			</div>
 		</div>
 	</div>
-
-
-<script>
-/* function loginadmin(){
-  
- 
-
-var name = document.getElementById("name").value;
-var pasword = document.getElementById("pasword").value;
-
-if(name == "sidra" && pasword == "sidra"){
-
-    window.location.href = "/dashboard";
-}
-if(name != "sidra" && pasword != "sidra"){
-
-document.getElementById("demo").innerHTML = "Invalid Credentials";
-}
-}
- */
-</script>
 	<!-- Loading Scripts -->
 	<script src="admin/js/jquery.min.js"></script>
 	<script src="admin/js/bootstrap-select.min.js"></script>

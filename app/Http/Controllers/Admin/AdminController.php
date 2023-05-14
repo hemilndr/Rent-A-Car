@@ -23,7 +23,7 @@ class AdminController extends Controller
             // return redirect(route('admin.dashboard'));
             return view('admin.dashboard');
         } else {
-            return back()->with('message', 'Invalid Login, Please try to login again');
+            return redirect()->back()->withErrors(['error' => 'Invalid credentials']);
         }
     }
     public function dashboard(Request $request)
@@ -32,7 +32,7 @@ class AdminController extends Controller
     }
     public function logout()
     {
-        auth()->guard('users')->logout();
+        auth()->guard('web')->logout();
 
         return redirect()->route('admin.login.form')->with('message', 'Succesfully Logged out');
     }
